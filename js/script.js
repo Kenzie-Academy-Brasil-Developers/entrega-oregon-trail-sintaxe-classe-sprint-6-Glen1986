@@ -2,9 +2,20 @@ class Traveler {
     constructor(name, food, isHealthy) {
         this.name = name;
         this.food = 1;
-        this.isHealthy = true;
+        this._isHealthy = true;
     }
-
+   get isHealthy(){
+     return this._isHealthy;
+   }
+   set isHealthy(isHealthy){
+     this._isHealthy = isHealthy;
+   }
+    get food(){
+     return this._food;
+   }
+   set food(food){
+     this._food = food;
+   }
    hunt() {
 
      return `agora, ${this.name} tem mais ${this.food++} comida` ;  // sitting code here
@@ -37,17 +48,26 @@ class Wagon{
        }
        return this.capacity
    }
-     shouldQuarantine(list){
-       console.log(this.name)
+  get capacity(){
+    return this._capacity;
+  }
+  set capacity(capacity){
+    this._capacity = capacity;
+  }
+     shouldQuarantine(_isHealthy){
+       const material = this.list;
+       console.log(this._isHealthy)
+
+ /*      console.log(this.name)
        console.log(this.list)
        let saude = [, , this.isHealthy]
        console.log(saude)
        if(this.food === 0){
          return true;
-       }
+                }
        return false;
          //retorna true si hay una persona enferma
-   }
+  */ }
      totalFood(){
    //retorna a quantidade total de comida dos pasageiros
      }
