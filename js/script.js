@@ -16,6 +16,9 @@ class Traveler {
    set food(food){
      this._food = food;
    }
+  get saude(){
+    return `${this.name} esta ${this._isHealthy}`
+  }
    hunt() {
 
      return `agora, ${this.name} tem mais ${this.food++} comida` ;  // sitting code here
@@ -33,7 +36,7 @@ class Traveler {
 
 class Wagon{
     constructor(capacity, list) {
-        this.capacity = capacity;
+        this._capacity = capacity;
         this.list = [];
     }
 
@@ -54,9 +57,9 @@ class Wagon{
   set capacity(capacity){
     this._capacity = capacity;
   }
-     shouldQuarantine(_isHealthy){
+     shouldQuarantine(){
        const material = this.list;
-       console.log(this._isHealthy)
+       console.log(...this.list)
 
  /*      console.log(this.name)
        console.log(this.list)
